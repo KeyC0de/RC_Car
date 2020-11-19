@@ -144,8 +144,7 @@ void main(void){
   
       for(k=0;k<36000;k++); // ~2 and a half seconds have passed
       P1OUT &= ~BIT7; // 0-1 -> TURN LEFT - Motor 2
-      for(k=0;k<6000;k++); // small delay to realise and see the front wheel turn // Ίσα-ίσα προλαβαίνω να 
-                          //παρατηρήσω τη στροφή του μπροστινού τροχού. Δεν γινόταν να τοποθετήσω μικρότερο delay
+      for(k=0;k<6000;k++); // small delay to realise and see the front wheel turn // just enough to note the turning of the front wheel. Putting a smaller delay the turning of the wheel would not be noticeable.
       P1OUT &= ~BIT4; // 0-0 Active Stop (front) MOTOR 2
       for(k=0;k<30000;k++); // ~3 seconds have passed
   
@@ -157,14 +156,14 @@ void main(void){
  
       P1OUT |= BIT5;
       P1OUT &= ~BIT3; // 1-0 -> FORWARD - Motor 1
-      for(i=0;i<36000;i++);  // Καθυστέρηση ενός δευτερολέπτου, στην οποία ο τροχός γυρνάει στη μια 
-      for(i=0;i<36000;i++);  // κατεύθυνση/μπροστά.
+      for(i=0;i<36000;i++);
+      for(i=0;i<36000;i++);
       P1OUT |= BIT3; // 1-1 -> Active Stop - Motor 1
       for(i=0;i<36000;i++);  
-      for(i=0;i<36000;i++); // Παύση για ένα δευτερόλεπτο του κινητήρα 1 – Motor 1
+      for(i=0;i<36000;i++);	// Motor 1
       P1OUT &= ~BIT5; // 0-1 -> BACKWARD - Motor 1
-      for(i=0;i<36000;i++);  // Καθυστέρηση ενός δευτερολέπτου, στην οποία ο τροχός γυρνάει στην άλλη 
-      for(i=0;i<36000;i++);  // κατεύθυνση/πίσω.
+      for(i=0;i<36000;i++);
+      for(i=0;i<36000;i++);
       P1OUT &= ~BIT3; // 0-0 -> Active Stop - Motor 1
 
       P1OUT &= ~EN1;
