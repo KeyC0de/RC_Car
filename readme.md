@@ -209,6 +209,11 @@ void main( void )
 ```
 
 
+# Contribute
+
+Please submit any bugs you find through GitHub repository 'Issues' page with details describing how to replicate the problem. If you liked it or you learned something new give it a star, clone it, contribute to it whatever. Enjoy.
+
+
 # License
 
 Distributed under the GNU GPL V3 License. See "GNU GPL license.txt" for more information.
